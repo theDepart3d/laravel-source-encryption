@@ -15,7 +15,7 @@ You have to [install phpBolt](https://phpbolt.com/download-phpbolt/).
 ### Step 2
 Require the package with composer using the following command:
 ```bash
-composer require thedeparted/laravel-source-encryption
+composer require thedepart3d/laravel-source-encryption
 ```
 ### Step 3
 #### For Laravel
@@ -23,13 +23,13 @@ The service provider will automatically get registered. Or you may manually add 
 ```php
 'providers' => [
     // ...
-    \thedeparted\LaravelSourceEncryption\EncryptServiceProvider::class,
+    \thedepart3d\LaravelSourceEncryption\EncryptServiceProvider::class,
 ];
 ```
 ### Step 4 (Optional)
 You can publish the config file with this following command:
 ```bash
-php artisan vendor:publish --provider="thedeparted\LaravelSourceEncryption\EncryptServiceProvider" --tag=encryptionConfig
+php artisan vendor:publish --provider="thedepart3d\LaravelSourceEncryption\EncryptServiceProvider" --tag=encryptionConfig
 ```
 
 ## Usage
