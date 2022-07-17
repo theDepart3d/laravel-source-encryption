@@ -5,7 +5,7 @@
  * @author      The Departed / Mr Robot
  * @license     http://www.opensource.org/licenses/mit-license.php MIT
  *
- * @link        https://github.com/theDepart3d/laravel-source-encryption
+ * @link        https://git.saeedhurzuk.com/MrRobot/Laravel-Source-Encryption
  */
 
 namespace thedeparted\LaravelSourceEncryption;
