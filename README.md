@@ -1,10 +1,8 @@
-# Laravel Source Code Encrypter
-
 ![](logo-img-white.svg)
 
 This package encrypts your php code with [phpBolt](https://phpbolt.com) 
 
-*For Laravel and Lumen 8*, 9*
+For Laravel 9*
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -13,7 +11,6 @@ This package encrypts your php code with [phpBolt](https://phpbolt.com)
 
 ### Step 1
 You have to [install phpBolt](https://phpbolt.com/download-phpbolt/).
-
 
 ### Step 2
 Require the package with composer using the following command:
@@ -29,20 +26,11 @@ The service provider will automatically get registered. Or you may manually add 
     \thedeparted\LaravelSourceEncryption\SourceEncryptServiceProvider::class,
 ];
 ```
-
-#### For Lumen
-Add this line of code under the `Register Service Providers` section of your `bootstrap/app.php`:
-```php
-$app->register(\thedeparted\LaravelSourceEncryption\SourceEncryptServiceProvider::class);
-```
-
-
 ### Step 4 (Optional)
 You can publish the config file with this following command:
 ```bash
-php artisan vendor:publish --provider="thedeparted\LaravelSourceEncryption\SourceEncryptServiceProvider" --tag=config
+php artisan vendor:publish --provider="thedeparted\LaravelSourceEncryption\SourceEncryptServiceProvider" --tag=encryptionConfig
 ```
-**Note:** If you are using Lumen, you have to use [this package](https://github.com/laravelista/lumen-vendor-publish).
 
 ## Usage
 Open terminal in project root and run this command: 
