@@ -49,6 +49,7 @@ class EncryptCommand extends Command
             } else {
                 $output = "Yes";
             }
+            // Do not change spaces it all aligns perfectly when displayed
             $this->error('                                               ');
             $this->error('  Please install bolt.so https://phpBolt.com   ');
             $this->error('  PHP Version '.phpversion(). '                            ');
