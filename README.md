@@ -1,6 +1,6 @@
 # Laravel Source Code Encrypter
 
-![](logo-img.svg)
+![](logo-img-white.svg)
 
 This package encrypts your php code with [phpBolt](https://phpbolt.com) 
 
