@@ -43,11 +43,18 @@ class EncryptCommand extends Command
     public function handle()
     {
         if (!extension_loaded('bolt')) {
-            $this->error('Please install bolt.so https://phpBolt.com');
-            $this->error('PHP Version '.phpversion());
-            $this->error('INI file location '.php_ini_scanned_files());
-            $this->error('Extension dir: '.ini_get('extension_dir'));
-
+            $output = shell_exec('ls ' . ini_get('extension_dir') . ' | grep -i bolt.so');
+            if ($output === NULL) {
+                $output = "NO ";
+            } else {
+                $output = "Yes";
+            }
+            $this->error('                                               ');
+            $this->error('  Please install bolt.so https://phpBolt.com   ');
+            $this->error('  PHP Version '.phpversion(). '                            ');
+            $this->error('  Extension dir: '.ini_get('extension_dir') .'         ');
+            $this->error('  Bolt Installed: ' . $output . '                          ');
+            $this->error('                                               ');
             return 1;
         }
 
@@ -148,7 +155,6 @@ bolt_decrypt( __FILE__ , '$key'); return 0;
         if (!empty($matches[0])) {
             $fileContents = preg_replace($pattern, '', $fileContents);
         }
-        /*$cipher = bolt_encrypt('?> ' . $fileContents, $key);*/
         $cipher = bolt_encrypt($fileContents, $key);
         File::isDirectory(dirname("$destination/$filePath")) or File::makeDirectory(dirname("$destination/$filePath"), 0755, true, true);
         File::put(base_path("$destination/$filePath"), $prepend.$cipher);
