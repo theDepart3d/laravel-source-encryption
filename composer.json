@@ -1,5 +1,5 @@
 {
-  "name": "thedeparted/laravel-source-encryption",
+  "name": "thedepart3d/laravel-source-encryption",
   "keywords": [
     "laravel",
     "lumen",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "The Departed",
+      "name": "The Depart3d",
       "email": "thedepart3d@protonmail.com"
     }
   ],
