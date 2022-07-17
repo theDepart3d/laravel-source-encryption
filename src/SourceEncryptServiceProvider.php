@@ -47,6 +47,6 @@ class SourceEncryptServiceProvider extends ServiceProvider
         $this->publishes([
             $configPath => $publishPath,
             $consolePath => $pubConfPath
-        ], 'config');
+        ], 'encryptionConfig');
     }
 }
