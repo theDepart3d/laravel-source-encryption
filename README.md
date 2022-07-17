@@ -23,13 +23,13 @@ The service provider will automatically get registered. Or you may manually add 
 ```php
 'providers' => [
     // ...
-    \thedeparted\LaravelSourceEncryption\SourceEncryptServiceProvider::class,
+    \thedeparted\LaravelSourceEncryption\EncryptServiceProvider::class,
 ];
 ```
 ### Step 4 (Optional)
 You can publish the config file with this following command:
 ```bash
-php artisan vendor:publish --provider="thedeparted\LaravelSourceEncryption\SourceEncryptServiceProvider" --tag=encryptionConfig
+php artisan vendor:publish --provider="thedeparted\LaravelSourceEncryption\EncryptServiceProvider" --tag=encryptionConfig
 ```
 
 ## Usage

@@ -12,7 +12,7 @@ namespace thedeparted\LaravelSourceEncryption;
 
 use Illuminate\Support\ServiceProvider;
 
-class SourceEncryptServiceProvider extends ServiceProvider
+class EncryptServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -23,7 +23,7 @@ class SourceEncryptServiceProvider extends ServiceProvider
     {
         // Register hard-delete-expired artisan command
         $this->commands([
-            SourceEncryptCommand::class,
+            EncryptCommand::class,
         ]);
     }
 
@@ -36,13 +36,13 @@ class SourceEncryptServiceProvider extends ServiceProvider
     {
         // Publish config file
         $configPath = __DIR__.'/../config/source-encryption.php';
-        $consolePath = __DIR__.'/../app/Console/Commands/SourceEncryptionKey.php';
+        $consolePath = __DIR__.'/../app/Console/Commands/GenerateEncryptionKey.php';
         if (function_exists('config_path')) {
             $publishPath = config_path('source-encryption.php');
-            $pubConfPath = base_path('/app/Console/Commands/SourceEncryptionKey.php');
+            $pubConfPath = base_path('/app/Console/Commands/GenerateEncryptionKey.php');
         } else {
             $publishPath = base_path('config/source-encryption.php');
-            $pubConfPath = base_path('/app/Console/Commands/SourceEncryptionKey.php');
+            $pubConfPath = base_path('/app/Console/Commands/GenerateEncryptionKey.php');
         }
         $this->publishes([
             $configPath => $publishPath,

@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 
-class SourceEncryptCommand extends Command
+class EncryptCommand extends Command
 {
     /**
      * The name and signature of the console command.

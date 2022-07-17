@@ -17,7 +17,7 @@
     "illuminate/support": "^8|^9",
     "ext-bolt": "*"
   },
-  "description": "Laravel Source Encryption",
+  "description": "Laravel Source Code Encryptor",
   "license": "MIT",
   "authors": [
     {
@@ -37,7 +37,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "thedeparted\\LaravelSourceEncryption\\SourceEncryptServiceProvider"
+        "thedeparted\\LaravelSourceEncryption\\EncryptServiceProvider"
       ]
     }
   }

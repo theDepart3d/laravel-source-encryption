@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class SourceEncryptionKey extends Command
+class GenerateEncryptionKey extends Command
 {
     /**
      * The name and signature of the console command.
