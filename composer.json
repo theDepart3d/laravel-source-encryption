@@ -27,7 +27,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "thedeparted\\LaravelSourceEncryption\\": "src"
+      "thedepart3d\\LaravelSourceEncryption\\": "src"
     }
   },
   "config": {
@@ -37,7 +37,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "thedeparted\\LaravelSourceEncryption\\EncryptServiceProvider"
+        "thedepart3d\\LaravelSourceEncryption\\EncryptServiceProvider"
       ]
     }
   }
