@@ -28,10 +28,11 @@ class GenerateEncryptionKey extends Command
     public function handle()
     {
         $path = base_path('.env');
-        $keyLength = 16;
+        $keyLength = env('SOURCE_ENCRYPTION_LENGTH', 16);
+        $token = bin2hex(openssl_random_pseudo_bytes($keyLength));
         if (file_exists($path)) {
             file_put_contents($path, str_replace(
-                'SOURCE_ENCRYPTION_KEY=' . env('SOURCE_ENCRYPTION_KEY'), 'SOURCE_ENCRYPTION_KEY='. generateKey($keyLength), file_get_contents($path)
+                'SOURCE_ENCRYPTION_KEY=' . env('SOURCE_ENCRYPTION_KEY'), 'SOURCE_ENCRYPTION_KEY='. $token, file_get_contents($path)
             ));
         }
     }

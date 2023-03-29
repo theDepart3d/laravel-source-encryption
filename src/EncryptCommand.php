@@ -76,7 +76,7 @@ class EncryptCommand extends Command
             $key = $this->option('key');
         }
         if (empty($this->option('keylength'))) {
-            $keyLength = config('source-encryption.key_length', 16);
+            $keyLength = env('SOURCE_ENCRYPTION_LENGTH', 16);
         } else {
             $keyLength = $this->option('keylength');
         }
