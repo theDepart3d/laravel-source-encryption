@@ -11,9 +11,9 @@
   ],
   "type": "library",
   "require": {
-    "php": ">=8.1.0",
-    "illuminate/console": "^8|^9",
-    "illuminate/support": "^8|^9",
+    "php": "^8.1",
+    "illuminate/console": "^8|^9|^10",
+    "illuminate/support": "^8|^9|^10",
     "ext-bolt": "*"
   },
   "description": "Laravel Source Code Encryptor",
