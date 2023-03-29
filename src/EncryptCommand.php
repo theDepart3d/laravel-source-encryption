@@ -141,7 +141,7 @@ class EncryptCommand extends Command
                 $this->warn("Encryption of $extension files is not currently supported. These files will be copied without change.");
                 $this->warned[] = $extension;
             }
-            File::copy(base_path($filePath), base_path("$destination/$filePath"));
+            File::copy(base_path($filePath), str_replace('/encrypted-source/', '', base_path("$destination/$filePath")));
 
             return;
         }
